@@ -28,6 +28,12 @@ h6 {
     margin: 0;
 }
 
+a {
+    font-family: inherit;
+    color: currentColor;
+    text-decoration: none;
+}
+
 body {
     font-family: "Roboto", sans-serif;
     color: var(--address-color);
@@ -56,6 +62,16 @@ main {
 
 .link {
     text-decoration: none;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    font-family: inherit;
+    margin-left: 0;
 }
 
 .visually-hidden {
@@ -563,6 +579,7 @@ main {
 .social-media-footer {
     display: flex;
     flex-direction: column;
+    margin-right: 80px;
 }
 
 .social-media-title {
@@ -610,6 +627,76 @@ main {
     background-color: var(--success-color);
 }
 
+.subscription-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.subscribe-text {
+    color: var(--page-background-color);
+    font-weight: 500;
+    font-size: var(--font-size);
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.footer-form {
+    display: flex;
+    gap: 24px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer-input {
+    width: 264px;
+    height: 40px;
+    border: 1px solid var(--page-background-color);
+    border-radius: 4px;
+    background-color: transparent;
+    padding: 8px 0 8px 16px;
+    outline: none;
+}
+
+.footer-input::placeholder {
+    font-family: "Roboto", sans-serif;
+    color: var(--page-background-color);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    display: flex;
+}
+
+.footer-subscribe-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--brand-color);
+    color: var(--page-background-color);
+    padding: 8px 24px;
+    gap: 16px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color var(--typical-transition);
+}
+
+.footer-subscribe-btn:hover {
+    background-color: var(--pressed-state-color);
+}
+
+.footer-subscribe-btn:active,
+.footer-subscribe-btn:focus {
+    background-color: var(--pressed-state-color);
+}
+
+.footer-subscribe-icon {
+    fill: var(--page-background-color);
+    display: flex;
+}
+
 .backdrop {
     position: fixed;
     top: 0;
@@ -624,6 +711,7 @@ main {
 }
 
 .modal {
+    padding: 24px 24px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -655,7 +743,7 @@ main {
     transition: background-color var(--typical-transition), border var(--typical-transition);
 }
 
-.modal-svg {
+.modal-close {
     transition: fill var(--typical-transition);
 }
 
@@ -671,4 +759,170 @@ main {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
+}
+
+.modal-title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: var(--font-size);
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--heading-color);
+    display: flex;
+    padding: 48px 0 0;
+    justify-content: center;
+}
+
+.modal-form {
+    margin: 16px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-caption {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    color: var(--subtle-text-color);
+}
+
+.input-modal {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    transition: border-color var(--typical-transition);
+    padding-left: 38px;
+    outline: transparent;
+    background-color: transparent;
+    transition: border-color var(--typical-transition);
+}
+
+.modal-field {
+    position: relative;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+.modal-svg {
+    position: absolute;
+    width: 18px;
+    left: 19px;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: var(--heading-color);
+    transition: fill var(--typical-transition);
+}
+
+.input-modal:focus {
+    border-color: var(--brand-color);
+}
+
+.input-modal:focus+.modal-svg {
+    fill: var(--brand-color);
+}
+
+.textarea {
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    width: 100%;
+    height: 120px;
+    background-color: transparent;
+    resize: none;
+    padding-left: 16px;
+    padding-top: 9px;
+    transition: border-color var(--typical-transition);
+    outline: transparent;
+}
+
+.textarea::placeholder {
+    color: rgba(46, 47, 66, 0.4);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+}
+
+.textarea:hover,
+.textarea:focus,
+.textarea:active {
+    border-color: var(--brand-color);
+}
+
+.checkbox-label {
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    color: var(--subtle-text-color);
+    display: inline-block;
+    align-items: center;
+}
+
+.checkbox-label span {
+    display: inline-flex;
+    fill: transparent;
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    margin-right: 8px;
+    align-items: center;
+    justify-content: center;
+    transition: fill var(--typical-transition), border var(--typical-transition), background-color var(--typical-transition);
+}
+
+.default-checkbox:checked+.checkbox-label span {
+    background-color: var(--pressed-state-color);
+    border: none;
+    fill: var(--light-backgrounds);
+}
+
+.label-link {
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: var(--brand-color);
+    text-decoration: underline;
+    display: inline-block;
+}
+
+.modal-send-btn {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+    min-width: 169px;
+    height: 56px;
+    border-radius: 4px;
+    border: none;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--page-background-color);
+    background-color: var(--brand-color);
+    cursor: pointer;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color var(--typical-transition);
+
+}
+
+.modal-send-btn:hover {
+    background-color: var(--pressed-state-color);
+}
+
+.modal-send-btn:active,
+.modal-send-btn:focus {
+    background-color: var(--pressed-state-color);
 }
