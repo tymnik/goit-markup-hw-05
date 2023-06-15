@@ -894,13 +894,17 @@ input {
     margin-right: 8px;
     align-items: center;
     justify-content: center;
-    transition: fill var(--typical-transition), border var(--typical-transition), background-color var(--typical-transition);
+    transition: fill var(--typical-transition), border var(--typical-transition), background-color var(--typical-transition) border-color var(--typical-transition);
 }
 
 .default-checkbox:checked+.checkbox-label span {
     background-color: var(--pressed-state-color);
     border: none;
     fill: var(--light-backgrounds);
+}
+
+.default-checkbox:focus+.checkbox-label span {
+    border-color: var(--pressed-state-color);
 }
 
 .label-link {
