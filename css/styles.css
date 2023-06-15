@@ -752,7 +752,6 @@ input {
     justify-content: center;
     align-items: center;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 0;
     transition: background-color var(--typical-transition), border var(--typical-transition);
 }
 
@@ -914,7 +913,6 @@ input {
     align-items: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 24px;
     min-width: 169px;
     height: 56px;
     border-radius: 4px;
@@ -929,6 +927,7 @@ input {
     cursor: pointer;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
     transition: background-color var(--typical-transition);
+    margin-top: 24px;
 
 }
 

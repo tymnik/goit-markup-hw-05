@@ -327,34 +327,33 @@
                 </svg></button>
             <p class="modal-title">Leave your contacts and we will call you back</p>
 
-            <form>
-                <div class="modal-form">
-                    <label class="form-caption" for="user-name">Name</label>
-                    <div class="modal-field">
-                        <input type="text" name="user-name" autofocus class="input-modal input-modal-username"
-                            id="user-name" /><svg class="modal-svg" width="18" height="24">
-                            <use href="./images/icons.svg#icon-person"></use>
-                        </svg>
-                    </div>
-                    <label class="form-caption" for="phone">Phone</label>
-                    <div class="modal-field">
-                        <input type="tel" name="tel" class="input-modal" id="phone" /><svg class="modal-svg" width="18"
-                            height="24">
-                            <use href="./images/icons.svg#icon-phone"></use>
-                        </svg>
-                    </div>
-                    <label class="form-caption" for="mail">Email</label>
-                    <div class="modal-field">
-                        <input type="email" name="email" class="input-modal" id="mail" /><svg class="modal-svg"
-                            width="18" height="24">
-                            <use href="./images/icons.svg#icon-email"></use>
-                        </svg>
-                    </div>
-                    <label class="form-caption" for="user-comment">Comment</label>
-                    <div class="textarea-field">
-                        <textarea name="comment" placeholder="Text input" class="textarea" id="user-comment"></textarea>
-                    </div>
+            <form class="modal-form">
+                <label class="form-caption" for="user-name">Name</label>
+                <div class="modal-field">
+                    <input type="text" name="user-name" autofocus class="input-modal input-modal-username"
+                        id="user-name" /><svg class="modal-svg" width="18" height="24">
+                        <use href="./images/icons.svg#icon-person"></use>
+                    </svg>
                 </div>
+                <label class="form-caption" for="phone">Phone</label>
+                <div class="modal-field">
+                    <input type="tel" name="tel" class="input-modal" id="phone" /><svg class="modal-svg" width="18"
+                        height="24">
+                        <use href="./images/icons.svg#icon-phone"></use>
+                    </svg>
+                </div>
+                <label class="form-caption" for="mail">Email</label>
+                <div class="modal-field">
+                    <input type="email" name="email" class="input-modal" id="mail" /><svg class="modal-svg" width="18"
+                        height="24">
+                        <use href="./images/icons.svg#icon-email"></use>
+                    </svg>
+                </div>
+                <label class="form-caption" for="user-comment">Comment</label>
+                <div class="textarea-field">
+                    <textarea name="comment" placeholder="Text input" class="textarea" id="user-comment"></textarea>
+                </div>
+
                 <div class="checkbox">
                     <input type="checkbox" value="accept" name="checkbox" class="default-checkbox visually-hidden"
                         id="user-privacy" />
@@ -366,11 +365,8 @@
                 </div>
                 <button type="submit" class="modal-send-btn">Send</button>
             </form>
-
         </div>
-
     </div>
-
     <script src="./js/modal.js"></script>
 
 </body>
