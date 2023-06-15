@@ -811,9 +811,12 @@ input {
     transition: border-color var(--typical-transition);
 }
 
+.form-div {
+    margin-bottom: 8px;
+}
+
 .modal-field {
     position: relative;
-    margin-bottom: 8px;
 }
 
 .modal-svg {
@@ -864,6 +867,10 @@ input {
 
 .textarea:focus {
     border-color: var(--brand-color);
+}
+
+.checkbox {
+    margin-bottom: 24px;
 }
 
 .checkbox-label {
@@ -927,8 +934,6 @@ input {
     cursor: pointer;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
     transition: background-color var(--typical-transition);
-    margin-top: 24px;
-
 }
 
 .modal-send-btn:hover {
